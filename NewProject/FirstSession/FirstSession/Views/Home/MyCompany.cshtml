@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="about_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div><img src="images/about-img.png" class="about_img"></div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="about_taital">About company</h1>
+                <div class="border"></div>
+                <p class="about_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitationconsectetur adipiscing </p>
+                <div class="read_bt_1"><a href="#" onclick="TestAlert(10)">Read More</a></div>
+                <div class="image_1"><img src="~/assets/images/img-1.png"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function TestAlert(id) {
+        alert("Test " + id);
+        $.ajax({
+                url: "@Url.Action("GetCompany", "Home")",
+                    type: 'Get',
+                    success: function (data) {
+                    $("#All").append(data);
+                    },
+                    error: function (res) {
+                        alertSw(res.responseText, 'error');
+                    }
+                });
+    }
+</script>

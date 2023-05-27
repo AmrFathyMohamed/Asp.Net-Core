@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!-- product section start -->
+<div class="product_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="product_taital">Products</h1>
+                <p class="product_text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme">
+                    @for (int i = 1; i < 15; i++)
+                    {
+                        double y = (10 * i) / 2;
+                        <div class="item">
+                            <div class="image_main"><img src="~/assets/images/face-img1.png" /></div>
+                            <h6 class="price_text">Price <br><span style="color: #f75261;">@y EGP</span></h6>
+                        </div>                        
+                    }                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- product section start -->
